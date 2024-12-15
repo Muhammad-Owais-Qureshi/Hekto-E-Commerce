@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 const NewsShelter = () => {
   return (
     <div className="w-full h-[462px] ">
