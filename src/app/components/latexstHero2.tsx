@@ -1,31 +1,75 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 const LatexstHero2 = () => {
   return (
-    <div className='flex justify-around mx-5 mt-16'>
-           <div>
-            <Image
-            src={'/images/Component 10.png'}
-            alt='chier'
-            width={300}
-            height={300}            />
+    <div className="flex justify-around mx-5 mt-16">
+      <div className="w-[360px] h-[306px] shadow-md">
+        <div className="bg-[rgba(247,247,247,1)] pl-[73px] pt-[33px]">
+          <Image
+            className="w-[223px] h-[229px]"
+            src={"/images/image 23.png"}
+            alt="chier"
+            width={200}
+            height={200}
+          />
         </div>
-        <div>
-            <Image
-            src={'/images/Component 11.png'}
-            alt='chier'
-            width={300}
-            height={300}            />
+        <div className="flex justify-between">
+          <p className="text-[rgba(21,24,117,1)]">SaleComfort Handy Craft</p>
+          <p>
+            {" "}
+            $42.00 <span className="text-pink-600 font-semibold">
+              {" "}
+              $65.00{" "}
+            </span>{" "}
+          </p>
         </div>
-        <div>
-            <Image
-            src={'/images/Component 12.png'}
-            alt='chier'
-            width={300}
-            height={300}            />
-        </div>
-    </div>
-  )
-}
+      </div>
 
-export default LatexstHero2
+      <div className="w-[360px] h-[306px] shadow-md">
+        <div className="bg-[rgba(247,247,247,1)] pl-[73px] pt-[33px]">
+          <Image
+            className="w-[223px] h-[229px]"
+            src={"/images/image 1172.png"}
+            alt="chier 2"
+            width={200}
+            height={200}
+          />
+        </div>
+        <div className="flex justify-between">
+          <p className="text-[rgba(21,24,117,1)]">SaleComfort Handy Craft</p>
+          <p>
+            {" "}
+            $42.00 <span className="text-pink-600 font-semibold">
+              {" "}
+              $65.00{" "}
+            </span>{" "}
+          </p>
+        </div>
+      </div>
+
+      <div className="w-[360px] h-[306px] shadow-md">
+        <div className="bg-[rgba(247,247,247,1)] pl-[73px] pt-[33px]">
+          <Image
+            className="w-[300px] h-[229px]"
+            src={"/images/image 3.png"}
+            alt="chier 3"
+            width={250}
+            height={200}
+          />
+        </div>
+        <div className="flex justify-between">
+          <p className="text-[rgba(21,24,117,1)]">SaleComfort Handy Craft</p>
+          <p>
+            {" "}
+            $42.00 <span className="text-pink-600 font-semibold">
+              {" "}
+              $65.00{" "}
+            </span>{" "}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LatexstHero2;

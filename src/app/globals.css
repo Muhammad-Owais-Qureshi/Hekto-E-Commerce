@@ -2,5 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.bg{
+    background-image: url('/images/Rectangle 102.png');
+    background-size: cover;
+} 
 
