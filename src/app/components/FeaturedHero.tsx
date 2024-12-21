@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 const FeaturedHero = () => {
   return (
-    <div className="flex justify-around mx-20 mt-5">
-      <div className="w-[270px] h-[361px] flex flex-col shadow-md">
-        <div className="bg-[rgba(246,247,251,1)] pt-[46px] pl-[40px] w-[270px] h-[236px]">
+    <div className="flex flex-col md:justify-around md:flex-row md:mx-20 md:mt-5 px-5 mt-3">
+      <div className="md:w-[270px] md:h-[361px] w-[220px] h-[250px] flex flex-col shadow-md">
+        <div className="bg-[rgba(246,247,251,1)] md:pt-[46px] md:pl-[40px] pt-[27px] pl-[32px] md:w-[270px] md:h-[236px] w-[220px] h-[150px]">
           <Image
-            className="w-[170px] h-[170px]"
+            className="md:w-[170px] md:h-[170px] w-[125px] h-[125px]"
             src={"/images/image 1168.png"}
             alt="ch one"
             width={250}
@@ -27,10 +27,10 @@ const FeaturedHero = () => {
           <p>$42.00</p>
         </div>
       </div>
-      <div className="w-[270px] h-[361px] flex flex-col shadow-md">
-        <div className="bg-[rgba(246,247,251,1)] pt-[48px] pl-[79px] w-[270px] h-[236px]">
+      <div className="md:w-[270px] md:h-[361px] w-[220px] h-[250px] flex flex-col shadow-md">
+        <div className="bg-[rgba(246,247,251,1)] md:pt-[48px] pt-[17px] md:pl-[79px] pl-[55px] mt-4 md:w-[270px] md:h-[236px] w-[220px] h-[140px]">
           <Image
-            className="w-[130px] h-[150px]"
+            className="md:w-[130px] md:h-[150px] w-[100px] h-[120px]"
             src={"/images/image 1.png"}
             alt="ch two"
             width={250}
@@ -53,7 +53,7 @@ const FeaturedHero = () => {
         </div>
       </div>
 
-      <div className="w-[270px] h-[361px] flex flex-col shadow-md">
+      <div className="md:w-[270px] md:h-[361px] w-[220px] h-[250px] flex flex-col shadow-md">
         <div className="bg-[rgba(246,247,251,1)] pt-[48px] pl-[79px] w-[270px] h-[236px]">
           <Image
             className="w-[130px] h-[150px]"
@@ -78,7 +78,7 @@ const FeaturedHero = () => {
           </div>
         </div>
       </div>
-      <div className="w-[270px] h-[361px] flex flex-col shadow-md">
+      <div className="md:w-[270px] md:h-[361px] w-[220px] h-[250px] flex flex-col shadow-md">
         <div className="bg-[rgba(246,247,251,1)] pt-[53px] pl-[26px] w-[270px] h-[236px]">
           <Image
             className="w-[216px] h-[151px]"

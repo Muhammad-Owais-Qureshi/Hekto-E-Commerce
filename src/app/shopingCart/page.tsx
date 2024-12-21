@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 const Page = () => {
   return (
     <>
@@ -166,7 +167,7 @@ const Page = () => {
       </div>
       <div className="flex justify-around mt-5">
         <div >
-            <button className="bg-[rgba(251,46,134,1)] px-12 py-3 text-white">Update Curt</button>
+           <Link href={'/comCart'}><button className="bg-[rgba(251,46,134,1)] px-12 py-3 text-white">Update Curt</button></Link> 
         </div>
         <div>
             <button className="bg-[rgba(251,46,134,1)] px-12 py-3 text-white">Clear Curt</button>
