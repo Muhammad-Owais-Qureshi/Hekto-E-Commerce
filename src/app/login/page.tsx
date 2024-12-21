@@ -10,7 +10,7 @@ const Login = () => {
             <input type="text" placeholder='Enter Your Email' className='bg-[rgba(255,255,255,1)] h-[44px] w-[377px] pl-5 mt-5' />
             <input type="password" placeholder='Enter Your Password' className='bg-[rgba(255,255,255,1)] h-[44px] w-[377px] pl-5 mt-5' />
             <button className="bg-[rgba(251,46,134,1)] text-white px-40 py-2 mt-4">Login</button>
-            <p className='text-[rgba(138,143,185,1)] py-2 mt-5'>Don't have an account? <span className='text-[rgba(251,46,134,1)]'>Sign Up</span></p>
+            <p className='text-[rgba(138,143,185,1)] py-2 mt-5'>Dont have an account? <span className='text-[rgba(251,46,134,1)]'>Sign Up</span></p>
             </div>
         </div>
     </div>

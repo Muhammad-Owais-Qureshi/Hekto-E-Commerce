@@ -8,7 +8,7 @@ export const POST = async (req: NextRequest) => {
     console.log(requestData)
 
     const email = requestData.email;
-    const password = requestData.password
+    // const password = requestData.password
     const cookieStore = await cookies()
     cookieStore.set("email" , "owais@gmail.com")
     cookieStore.set("password" , "1234")
