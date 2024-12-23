@@ -8,7 +8,7 @@ import { VscAccount } from "react-icons/vsc";
 import { RiArrowDropDownLine } from "react-icons/ri";
 const TopHeader = () => {
   return (
-    <div className='bg-[rgba(126,51,224,1)] w-[350px] md:w-full text-white flex flex-col leading-8 pl-3 py-2 h-[265px] 
+    <div className='bg-[rgba(126,51,224,1)] w-screen md:w-full text-white flex flex-col leading-8 pl-3 py-2 h-[265px] 
                     md:h-10 md:flex md:justify-around md:flex-row md:px-10 '>
         <div className='md:flex md:justify-between md:flex-row md:gap-5'>
             <p className='pt-1 '><MdOutlineMailOutline /></p>

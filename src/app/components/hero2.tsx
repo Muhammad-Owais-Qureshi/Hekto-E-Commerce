@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 const Hero2 = () => {
   return (
-    <div className="bg-[rgba(241,240,255,1)] mt-28 flex justify-around px-44 pt-14 bg-clip-border h-[569px] items-center">
-      <div className="pl-[-9px] w-[550px]">
+    <div className="bg-[rgba(241,240,255,1)] mt-28 flex md:justify-around md:flex-row flex-col w-screen px-44 pt-14 bg-clip-border md:h-[569px] items-center">
+      <div className="pl-[-9px] w-[550px] ">
         <Image
-          className="pl-[40px] bg-pink-100 rounded-full w-[509px]"
+          className="pl-[40px] bg-pink-100 rounded-full md:w-[509px] w[360px]"
           src={"/images/home-sofa.png"}
           alt="sofa"
           width={600}
@@ -14,7 +14,7 @@ const Hero2 = () => {
       </div>
       <div>
         <div className="pl-10">
-          <h1 className="text-[42px] text-[rgba(26,11,91,1)] font-bold mt-5">
+          <h1 className="md:text-[42px] text-3xl mb-3 text-[rgba(26,11,91,1)] font-bold mt-5">
             Unique Features Of leatest & Trending Poducts
           </h1>
           {/* <p ">

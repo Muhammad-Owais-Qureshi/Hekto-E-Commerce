@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 const Service = () => {
   return (
-    <div className='flex justify-around mt-5'>
+    <div className='flex flex-col justify-center items-center md:flex-row md:justify-around mt-5'>
         <div className='flex flex-col items-center leading-8 w-[270px] h-[320px] shadow-md pt-16'>
             <Image
             className='w-[65px] h-[65px]'

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Hero = () => {
   return (
-    <div className="mt-5 flex justify-between w-[350px] h-[580px] md:w-full md:h-[764px] bg-[rgba(247,247,247,1)]">
+    <div className="mt-5 flex justify-between w-screen h-[580px] md:w-full md:h-[764px] bg-[rgba(247,247,247,1)]">
       <div>
         <Image
           className="md:w-[387px] md:h-[387px] w-[200px] h-[150px]"

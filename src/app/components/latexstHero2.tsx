@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 const LatexstHero2 = () => {
   return (
-    <div className="flex justify-around mx-5 mt-16">
-      <div className="w-[360px] h-[306px] shadow-md">
+    <div className="flex flex-col justify-center items-center md:flex-row md:justify-around md:mx-5 mt-16">
+      <div className="md:w-[360px] md:h-[306px] w-[260px] h-[326px] shadow-md">
         <div className="bg-[rgba(247,247,247,1)] pl-[73px] pt-[33px]">
           <Image
             className="w-[223px] h-[229px]"
@@ -25,7 +25,7 @@ const LatexstHero2 = () => {
         </div>
       </div>
 
-      <div className="w-[360px] h-[306px] shadow-md">
+      <div className="md:w-[360px] md:h-[306px] w-[260px] h-[326px] shadow-md">
         <div className="bg-[rgba(247,247,247,1)] pl-[73px] pt-[33px]">
           <Image
             className="w-[223px] h-[229px]"
@@ -47,10 +47,10 @@ const LatexstHero2 = () => {
         </div>
       </div>
 
-      <div className="w-[360px] h-[306px] shadow-md">
-        <div className="bg-[rgba(247,247,247,1)] pl-[73px] pt-[33px]">
+      <div className="md:w-[360px] md:h-[306px] w-[260px] h-[326px] shadow-md">
+        <div className="bg-[rgba(247,247,247,1)] pl-[73px] pt-[33px] flex items-center justify-center">
           <Image
-            className="w-[300px] h-[229px]"
+            className="md:w-[300px] w-[251px] h-[229px]"
             src={"/images/image 3.png"}
             alt="chier 3"
             width={250}
