@@ -131,7 +131,7 @@ const ProductList = () => {
       </div>
       <h1 className="text-[rgba(16,23,80,1)] font-bold text-2xl mt-5 ml-5">Related Products</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 w-[1170px] md:h-[509px] h-auto shadow-xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 md:w-[1170px] md:h-[509px] h-auto shadow-xl mx-auto">
        
         <div>
           <div className="w-[270px]">
