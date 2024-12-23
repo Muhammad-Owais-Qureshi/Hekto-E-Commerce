@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 const Hero2 = () => {
   return (
-    <div className="bg-[rgba(241,240,255,1)] mt-28 flex md:justify-around md:flex-row flex-col w-screen px-44 pt-14 bg-clip-border md:h-[569px] items-center">
-      <div className="pl-[-9px] w-[550px] ">
+    <div className="bg-[rgba(241,240,255,1)] mt-28 flex md:justify-around md:flex-row flex-col-reverse w-screen px-44 pt-14 bg-clip-border md:h-[569px] items-center">
+      <div className="md:w-[550px] w-[300px]">
         <Image
-          className="pl-[40px] bg-pink-100 rounded-full md:w-[509px] w[360px]"
+          className="md:pl-[40px] bg-pink-100 rounded-full md:w-[509px]"
           src={"/images/home-sofa.png"}
           alt="sofa"
           width={600}
@@ -13,14 +13,10 @@ const Hero2 = () => {
         />
       </div>
       <div>
-        <div className="pl-10">
+        <div className="md:pl-10">
           <h1 className="md:text-[42px] text-3xl mb-3 text-[rgba(26,11,91,1)] font-bold mt-5">
             Unique Features Of leatest & Trending Poducts
           </h1>
-          {/* <p ">
-            
-
-          </p> */}
           <li className="text-[rgba(251,46,134,1)]"> <span className="text-[rgba(172,171,195,1)]"> All frames constructed with hardwood solids and laminates </span></li>
           <li className="text-blue-800">
            <span className="text-[rgba(172,171,195,1)]">  Reinforced with double wood dowels, glue, screw-nails corner

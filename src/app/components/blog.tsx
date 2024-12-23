@@ -4,11 +4,11 @@ import Link from "next/link";
 const Blog = () => {
   return (
     <div>
-      <h1 className="text-center text-[42px] text-[rgba(26,11,91,1)] font-bold mt-5">
+      <h1 className="text-center md:text-[42px] text-3xl text-[rgba(26,11,91,1)] font-bold mt-5">
         Leatest Blog
       </h1>
-      <div className="flex justify-around mt-6">
-        <div className="w-[370px] h-[493px] shadow-md">
+      <div className="flex flex-col md:flex-row md:justify-around mt-6">
+        <div className="w-[360px] h-[493px] shadow-md">
           <div>
             <Image
               className="w-[370px] h-[255px]"
@@ -55,7 +55,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div className="w-[370px] h-[493px] shadow-md">
+        <div className="w-[360px] h-[493px] shadow-md">
           <div>
             <Image
               className="w-[370px] h-[255px]"
@@ -102,7 +102,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div className="w-[370px] h-[493px] shadow-md">
+        <div className="w-[360px] h-[493px] shadow-md">
           <div>
             <Image
               className="w-[370px] h-[255px]"

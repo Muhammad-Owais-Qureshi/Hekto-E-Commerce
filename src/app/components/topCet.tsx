@@ -3,9 +3,9 @@ import Image from 'next/image'
 const TopCet = () => {
   return (
     <div>
-        <h1 className='text-center text-[42px] text-[rgba(26,11,91,1)] font-bold mt-5'>Top Categories</h1>
+        <h1 className='text-center md:text-[42px] text-3xl text-[rgba(26,11,91,1)] font-bold mt-5'>Top Categories</h1>
 
-        <div className='flex justify-around mt-8'>
+        <div className='flex flex-col justify-center items-center md:flex-row md:justify-around mt-8'>
             <div className='w-[269px] h-[345px]'> 
                 <div className='bg-[rgba(246,247,251,1)] rounded-full w-[269px] h-[269px] flex justify-center items-center'>
                 <Image

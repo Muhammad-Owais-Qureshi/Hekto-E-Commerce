@@ -5,12 +5,12 @@ const DiscountHero = () => {
   return (
     <div>
       <div>
-        <h1 className="text-center text-[42px] text-[rgba(26,11,91,1)] font-bold mt-5">
+        <h1 className="text-center md:text-[42px] text-3xl text-[rgba(26,11,91,1)] font-bold mt-5">
           Discount Item
         </h1>
       </div>
       <div>
-        <ul className="flex justify-center gap-4">
+        <ul className="flex justify-center mt-5 gap-4">
           <Link href={"/"}>
             {" "}
             <li className="text-[rgba(251,73,151,1)] font-semibold">
@@ -32,18 +32,18 @@ const DiscountHero = () => {
         </ul>
       </div>
 
-      <div className="flex justify-around">
+      <div className="flex flex-col md:flex-row md:justify-around">
         <div className="">
           <div>
-            <h1 className="text-[42px] text-[rgba(26,11,91,1)] font-bold mt-5">
+            <h1 className="md:text-[42px] text-2xl text-center text-[rgba(26,11,91,1)] font-bold mb-4 mt-5">
               20% Discount Of All Products
             </h1>
-            <p className="text-[rgba(251,46,134,1)]">Eams Sofa Compact</p>
-            <p className="text-[rgba(183,186,203,1)] w-[523px] h-[49px] leading-7">
+            <p className="text-[rgba(251,46,134,1)] text-center">Eams Sofa Compact</p>
+            <p className="text-[rgba(183,186,203,1)] md:w-[523px] md:h-[49px] w-[330px] h-[200px] text-center leading-7">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget
               feugiat habitasse nec, bibendum condimentum.
             </p>
-            <ul className="w-[523px] mt-5 grid grid-cols-2">
+            <ul className="md:w-[523px] w-[340px] mt-5 grid grid-rows-4 ml-10 md:grid-cols-2">
               <li className="text-[rgba(183,186,203,1)] w-[199px] h-[30px]">
                 Material expose like metals
               </li>
@@ -57,7 +57,7 @@ const DiscountHero = () => {
                 Material expose like metals
               </li>
             </ul>
-            <button className="bg-[rgba(251,46,134,1)] text-white px-6 py-3 mt-4 rounded-md">
+            <button className="bg-[rgba(251,46,134,1)] text-white ml-10 px-6 py-3 mt-4 rounded-md">
               Shop Now
             </button>
           </div>

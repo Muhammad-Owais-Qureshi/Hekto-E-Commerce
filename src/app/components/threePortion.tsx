@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 const ThreePortion = () => {
   return (
-    <div className="mt-16 mx-7 flex justify-around">
-      <div className="bg-[rgba(255,246,251,1)] w-[420px] h-[270px]">
+    <div className="mt-16 mx-7 flex flex-col gap-4 md:flex-row md:justify-around">
+      <div className="bg-[rgba(255,246,251,1)] md:w-[420px] w-[340px] h-[270px]">
         <div className="pt-5 pl-5">
           <h1 className="text-[rgba(21,24,117,1)] font-bold text-2xl">
             23% off in all products
@@ -20,7 +20,7 @@ const ThreePortion = () => {
           />
         </div>
       </div>
-      <div className="bg-[rgba(238,239,251,1)]  w-[420px] h-[270px]">
+      <div className="bg-[rgba(238,239,251,1)]  md:w-[420px] w-[340px] h-[270px]">
         <div className="pt-5 pl-5">
           <h1 className="text-[rgba(21,24,117,1)] font-bold text-2xl">
             23% off in all products

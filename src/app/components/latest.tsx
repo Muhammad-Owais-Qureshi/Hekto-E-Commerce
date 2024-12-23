@@ -4,7 +4,7 @@ import React from 'react'
 const Latest = () => {
   return (
     <div >
-        <div className='text-center text-2xl w-[300px] md:font-semibold md:text-[42px] text-[rgba(26,11,91,1)] font-bold mt-5'>
+        <div className='text-center text-2xl md:text-[42px] text-[rgba(26,11,91,1)] font-bold mt-5'>
         <h1>Leatest Products</h1>
         </div>
         <div className='flex md:flex-row justify-center mt-5'>

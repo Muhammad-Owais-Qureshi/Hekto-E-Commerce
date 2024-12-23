@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <div className='flex justify-center'>
         <Image
-        className='w-[904px] h-[93px]'
+        className='md:w-[904px] w-[360px] h-[93px]'
         src={'/images/image 1174.png'}
         alt='logo'
         width={700}

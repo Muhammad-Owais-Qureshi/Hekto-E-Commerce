@@ -3,10 +3,10 @@ import Image from "next/image";
 const TrendingPro = () => {
   return (
     <div>
-      <h1 className="text-center text-[42px] text-[rgba(26,11,91,1)] font-bold mt-5">
+      <h1 className="text-center md:text-[42px] text-3xl text-[rgba(26,11,91,1)] font-bold mt-5">
         Trending Products
       </h1>
-      <div className="flex justify-around mt-7">
+      <div className="flex flex-col justify-center items-center gap-3 md:flex-row md:justify-around mt-7">
         <div className="w-[270px] h-[350px] shadow-md flex flex-col justify-center">
           <div className="w-[247px] h-[244px] mt-[11px] ml-[11px] flex justify-center items-center bg-[rgba(245,246,248,1)]">
             <Image
