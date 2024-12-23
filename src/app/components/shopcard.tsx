@@ -6,7 +6,7 @@ const Shopcard = () => {
   return (
     <>
     <div>
-      <div className="flex justify-around mt-16 mx-5">
+      <div className="flex flex-col md:flex-row md:justify-around mt-16 md:mx-5">
         <div>
           <div className="bg-[rgba(246,247,251,1)] w-[270px] h-[280px] flex justify-center items-center">
            <Link href={"product/products1"}><Image
@@ -111,7 +111,7 @@ const Shopcard = () => {
       </div>
     </div>
     <div>
-      <div className="flex justify-around mt-16 mx-5">
+      <div className="flex flex-col md:flex-row md:justify-around mt-16 md:mx-5">
         <div>
           <div className="bg-[rgba(246,247,251,1)] w-[270px] h-[280px] flex justify-center items-center">
             <Link href={"/product/products"}>
@@ -213,7 +213,7 @@ const Shopcard = () => {
       </div>
     </div>
     <div>
-      <div className="flex justify-around mt-16 mx-5">
+      <div className="flex flex-col md:flex-row md:justify-around mt-16 md:mx-5">
         <div>
           <div className="bg-[rgba(246,247,251,1)] w-[270px] h-[280px] flex justify-center items-center">
             <Image
@@ -312,7 +312,7 @@ const Shopcard = () => {
         </div>
       </div>
     </div>
-    <div className="mt-10">
+    <div className="mt-10 md:w-full w-[270px]">
     <Logo/>
     </div>
    
