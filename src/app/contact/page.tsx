@@ -1,8 +1,11 @@
 import React from "react";
-
+import ContactForm from "@/components/contact-form";
 const Page = () => {
   return (
+
+    
     <div className="md:w-[1200px]">
+      <ContactForm/>
       <div className="md:flex md:flex-row justify-around mt-10 flex-col">
         <div className="w-1/2 ml-5">
           <h1 className="text-[rgba(21,24,117,1)] text-2xl font-bold">
