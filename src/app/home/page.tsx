@@ -16,6 +16,8 @@ import NewsShelter from '../components/newsShelter'
 import Logo from '../components/logo'
 import Blog from '../components/blog'
 const page = () => {
+  
+
   return (
     <div>
       <Hero/>

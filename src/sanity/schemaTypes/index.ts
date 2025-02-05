@@ -1,6 +1,6 @@
 import { type SchemaTypeDefinition } from 'sanity'
-import product from '../../../next-ecommerce-template-4/src/sanity/schemaTypes/product'
+import Product from './Sanityblog'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [product],
+  types: [Product],
 }

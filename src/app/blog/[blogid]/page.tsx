@@ -2,9 +2,9 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 
-const Blog = async ({ params: { slug } }: { params: { slug: string } }) => {
+const Blog = async () => {
 
-  const query = `*[_type == "post" && slug.current == slug.current] {
+  const query = `*[_type == "post" && slug.current == slug]{ {
     image,
     name,
     heading,

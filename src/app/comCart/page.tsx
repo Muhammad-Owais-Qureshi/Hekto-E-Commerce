@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 const CompeletCart = () => {
+  
   return (
     <div className="flex flex-col items-center justify-center w-[635px] h-[326px] mx-auto mt-20">
         <Image

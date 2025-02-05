@@ -11,7 +11,7 @@ dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID = 'q408mxds',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET = "production",
-  token: process.env.SANITY_API_TOKEN ="skWYaWv7KPtKxykXDqPZtGfmnuVS8jc5B6V12o9KqrcHgrQFuuegVmJFh2pl0tYBDIVall7HVUvBPF6EzgH9lnoURkBbqMnmhWtVRH3SKsRxHJepWHYj8jLtpmUObMWxaVySglWWcrkzlM3uQMUl1zVEEiUmyDV4hVUEs0AwKD6EitVwHxtb",
+  token: process.env.SANITY_API_TOKEN =SANITY_API_TOKEN,
   apiVersion: '2025-01-15',
   useCdn: false,
 });

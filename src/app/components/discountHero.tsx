@@ -1,7 +1,21 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-const DiscountHero = () => {
+import { ProductData } from "./FeaturedHero";
+import { client } from "@/sanity/lib/client";
+
+const DiscountHero = async () => {
+  const quary = `
+    *[_type == "product" && category == "Chair"]{
+    _id,
+     "image":image.asset->url,
+    name,
+    price,
+    description,
+    discountPercentage,
+    }[0..1]
+    `
+    const data1:ProductData[] = await client.fetch(quary);
   return (
     <div>
       <div>
@@ -63,13 +77,16 @@ const DiscountHero = () => {
           </div>
         </div>
         <div className="pt-6">
+          <Link href={`product/${data1[0]._id}`}>
           <Image
             className="w-[400px] bg-purple-200 rounded-full"
             src={"/images/doc-ch.png"}
             alt="doc"
             width={300}
             height={300}
+
           />
+          </Link>
         </div>
       </div>
     </div>

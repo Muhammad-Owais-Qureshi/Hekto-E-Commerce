@@ -1,110 +1,125 @@
+"use client"
+import {useState,useEffect} from 'react'
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-const Page = () => {
+import { IData } from '../product/[id]/page';
+
+
+const ShoppingCart = () => {
+  
+    const [cartItems, setCartItems] = useState<{ [key: string]: IData }>({});
+
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart") || "{}");
+    setCartItems(storedCart);
+  }, []);
+  
+   const handleRemove = (id:string) => {
+    const newCartItems = { ...cartItems };
+    delete newCartItems[id];
+    setCartItems(newCartItems);
+    localStorage.setItem("cart", JSON.stringify(newCartItems));
+   }
   return (
     <>
-      <div className="flex flex-col md:flex-row md:justify-between mx-24 mt-16 ">
-        <div>
-          <h1 className="text-[rgba(29,49,120,1)] font-bold">Product</h1>
-          <div className="flex mt-8">
-            <Image
-              src={"/images/Rectangle 34.png"}
-              alt="purse"
-              width={83}
-              height={87}
-            />
-            <div className="flex flex-col ml-3">
-              <h1>Ut diam consequat</h1>
-              <p className="text-[rgba(161,168,193,1)]">Color:Brown</p>
-              <p className="text-[rgba(161,168,193,1)]">Size:XL</p>
+       <div className="flex justify-between md:flex-row md:justify-between mx-24 mt-16">
+       <div>
+      <h2 className="text-lg font-bold">Shopping Cart</h2>
+      {Object.keys(cartItems).length === 0 ? (
+        <p>Cart is empty</p>
+      ) : (
+        <ul>
+          {Object.values(cartItems).map((item) => (
+            <div key={item._id} className="flex flex-col justify-between md:flex-row md:justify-between mx-24 mt-16 gap-10">
+                <div className="flex justify-between md:flex-row md:justify-between mx-24 mt-16 gap-10 w-full">
+                <div>
+                 <h1 className="text-[rgba(29,49,120,1)] font-bold">Product</h1>
+                 <div className="flex mt-8 mr-10 w-20">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={83}
+                    height={50}
+                  />
+                  <div className="flex flex-col ml-3">
+                    <h1 className='w-5'>{item.name}</h1>
+                    <p className="text-[rgba(161,168,193,1)]">Color:Brown</p>
+                    <p className="text-[rgba(161,168,193,1)]">Size:XL</p>
+                  </div>
+                </div>
+                 </div>
+                <div>
+                <h1 className="text-[rgba(29,49,120,1)] font-bold mt-3 md:mt-0">Prize</h1>
+                <div className="">
+                  <p className="md:mt-8 mt-4">{item.price}</p>
+                </div>
+                </div>
+                <div>
+                <h1 className="text-[rgba(29,49,120,1)] font-bold md:mt-0 mt-3">Quantity</h1>
+                <div>
+                <p className="md:mt-8 mt-4">{item.quantity}</p>
+                   {/* <button className="md:mt-8 mt-4">+</button>
+                   <button className="md:mt-8 mt-4">-</button>
+                    */}
+                 </div>
+                </div>
+                <div>
+                <h1 className="text-[rgba(29,49,120,1)] md:mt-0 mt-3 font-bold">Total</h1>
+                <div>
+                    <p className="md:mt-8 mt-4">{item.price * item.quantity}</p>
+                  </div>
+                  <button onClick={()=>handleRemove(item._id)} className='bg-[rgba(251,46,134,1)] text-white md:px-6 md:py-2 px-4 py-2 mt-4'>Remove</button>
+                </div>
+              
+                </div>
             </div>
-          </div>
-          <div className="flex mt-8">
-            <Image
-              src={"/images/Rectangle 35.png"}
-              alt="purse5"
-              width={83}
-              height={87}
-            />
-            <div className="flex flex-col ml-3">
-              <h1>Ut diam consequat</h1>
-              <p className="text-[rgba(161,168,193,1)]">Color:Brown</p>
-              <p className="text-[rgba(161,168,193,1)]">Size:XL</p>
-            </div>
-          </div>
-          <div className="flex mt-8">
-            <Image
-              src={"/images/Rectangle 36.png"}
-              alt="purse6"
-              width={83}
-              height={87}
-            />
-            <div className="flex flex-col ml-3">
-              <h1>Ut diam consequat</h1>
-              <p className="text-[rgba(161,168,193,1)]">Color:Brown</p>
-              <p className="text-[rgba(161,168,193,1)]">Size:XL</p>
-            </div>
-          </div>
-          <div className="flex mt-8">
-            <Image
-              src={"/images/Rectangle 37.png"}
-              alt="purse7"
-              width={83}
-              height={87}
-            />
-            <div className="flex flex-col ml-3">
-              <h1>Ut diam consequat</h1>
-              <p className="text-[rgba(161,168,193,1)]">Color:Brown</p>
-              <p className="text-[rgba(161,168,193,1)]">Size:XL</p>
-            </div>
-          </div>
-          <div className="flex mt-8">
-            <Image
-              src={"/images/Rectangle 38.png"}
-              alt="purse8"
-              width={83}
-              height={87}
-            />
-            <div className="flex flex-col ml-3">
-              <h1>Ut diam consequat</h1>
-              <p className="text-[rgba(161,168,193,1)]">Color:Brown</p>
-              <p className="text-[rgba(161,168,193,1)]">Size:XL</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center md:flex-row md:justify-between md:gap-40">
-          <div className="">
-            <h1 className="text-[rgba(29,49,120,1)] font-bold mt-3 md:mt-0">Prize</h1>
-            <p className="md:mt-8 mt-4">$32.00</p>
-            <p className="md:mt-24 mt-12">$32.00</p>
-            <p className="md:mt-24 mt-12">$32.00</p>
-            <p className="md:mt-24 mt-12">$32.00</p>
-            <p className="md:mt-24 mt-12">$32.00</p>
-          </div>
-          <div>
-            <div>
-              <h1 className="text-[rgba(29,49,120,1)] font-bold md:mt-0 mt-3">Quantity</h1>
-              <p className="md:mt-8 mt-4">+ | -</p>
-              <p className="md:mt-24 mt-12">+ | -</p>
-              <p className="md:mt-24 mt-12">+ | -</p>
-              <p className="md:mt-24 mt-12">+ | -</p>
-              <p className="md:mt-24 mt-12">+ | -</p>
-            </div>
-          </div>
-          <div>
-            <h1 className="text-[rgba(29,49,120,1)] md:mt-0 mt-3 font-bold">Total</h1>
-            <div>
-              <p className="md:mt-8 mt-4">$219.00</p>
-              <p className="md:mt-24 mt-12">$219.00</p>
-              <p className="md:mt-24 mt-12">$219.00</p>
-              <p className="md:mt-24 mt-12">$219.00</p>
-              <p className="md:mt-24 mt-12">$219.00</p>
-            </div>
-          </div>
-        </div>
-       
-      </div>
+          ))}
+        
+        </ul>
+      )}
+    </div>
+                {/* <div className="flex justify-around w-full">
+                <div>
+                 <h1 className="text-[rgba(29,49,120,1)] font-bold">Product</h1>
+                 <div className="flex mt-8">
+                  <Image
+                    src={"/images/Rectangle 34.png"}
+                    alt="purse"
+                    width={83}
+                    height={87}
+                  />
+                  <div className="flex flex-col ml-3">
+                    <h1>Ut diam consequat</h1>
+                    <p className="text-[rgba(161,168,193,1)]">Color:Brown</p>
+                    <p className="text-[rgba(161,168,193,1)]">Size:XL</p>
+                  </div>
+                </div>
+                 </div>
+                <div>
+                <h1 className="text-[rgba(29,49,120,1)] font-bold mt-3 md:mt-0">Prize</h1>
+                <div className="">
+                  <p className="md:mt-8 mt-4">$32.00</p>
+                </div>
+                </div>
+                <div>
+                <h1 className="text-[rgba(29,49,120,1)] font-bold md:mt-0 mt-3">Quantity</h1>
+                <div>
+                   
+                   <button className="md:mt-8 mt-4">+</button>
+                   <button className="md:mt-8 mt-4">-</button>
+                   
+                 </div>
+                </div>
+                <div>
+                <h1 className="text-[rgba(29,49,120,1)] md:mt-0 mt-3 font-bold">Total</h1>
+                <div>
+                    <p className="md:mt-8 mt-4">$219.00</p>
+                  </div>
+                </div>
+                </div> */}
+              
+              </div>
       <div className="">
           <h1 className="text-[rgba(29,49,120,1)] font-bold text-center text-2xl">
             Cart Totals
@@ -178,4 +193,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default ShoppingCart;

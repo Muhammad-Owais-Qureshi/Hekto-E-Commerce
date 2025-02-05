@@ -1,12 +1,10 @@
 import React from "react";
 import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
-import Link from "next/link";
 import BlogCard from "../components/blogCard";
 
 
 export interface Post {
-  image: any;
+  image: string;
   name: string;
   date: string;
   heading: string;
