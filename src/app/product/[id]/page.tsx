@@ -35,7 +35,7 @@ const Product = () => {
     const fetchData = async () => {
       try {
         const query = `
-          *[_type == "Product" && _id == $id][0] {
+          *[_type == "product" && _id == $id][0] {
             _id,
             "image": image.asset->url,
             name,
